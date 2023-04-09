@@ -228,35 +228,35 @@ class _MyAppState extends State<MyApp> {
       style: ReceiptTextStyleType.bold,
     );
     receiptText.addText(
-      'Black White Street, Jakarta, Indonesia',
+      'အဓိပတိလမ်း၊ လှိုင်မြို့နယ်၊ရန်ကုန်',
       size: ReceiptTextSizeType.small,
     );
     receiptText.addSpacer(useDashed: true);
     receiptText.addLeftRightText('','','Time', '04/06/21, 10:00');
     receiptText.addSpacer(useDashed: true);
     receiptText.addLeftRightText(
-      'Apple 1kg',
-      '3',
-      'Rp.100',
-      'Rp30.000',
+      'ပန်းသီး',
+      '၃',
+      '၁၅၀၀',
+      '၄၅၀၀',
       leftStyle: ReceiptTextStyleType.normal,
       rightStyle: ReceiptTextStyleType.bold,
     );
     receiptText.addSpacer(useDashed: true);
     receiptText.addLeftRightText(
-      'TOTAL',
-      '3',
-      '100',
-      'Rp30.000',
+      'စုစုပေါင်း',
+      '၃',
+      '၁၅၀၀',
+      '၄၅၀၀',
       leftStyle: ReceiptTextStyleType.normal,
       rightStyle: ReceiptTextStyleType.bold,
     );
     receiptText.addSpacer(useDashed: true);
     receiptText.addLeftRightText(
-      'Payment',
+      'ငွေချေရန်',
       '',
       '',
-      'Cash',
+      'လက်ငင်း',
       leftStyle: ReceiptTextStyleType.normal,
       rightStyle: ReceiptTextStyleType.normal,
     );
@@ -265,11 +265,11 @@ class _MyAppState extends State<MyApp> {
     await _bluePrintPos.printReceiptText(receiptText,PaperSize.mm80);
 
     /// Example for print QR
-    await _bluePrintPos.printQR('www.google.com',PaperSize.mm80, size: 250);
+    await _bluePrintPos.printQR('www.fruitysense.com',PaperSize.mm80, size: 250);
 
     /// Text after QR
     final ReceiptSectionText receiptSecondText = ReceiptSectionText();
-    receiptSecondText.addText('Powered by ayeee',
+    receiptSecondText.addText('developed by amk',
         size: ReceiptTextSizeType.small);
     receiptSecondText.addSpacer();
     await _bluePrintPos.printReceiptText(receiptSecondText,PaperSize.mm80,feedCount: 1);
